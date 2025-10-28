@@ -17,7 +17,7 @@
 
     <!-- Header -->
     <VBox alignment="CENTER" spacing="10">
-        <FontIcon iconLiteral="fa-git-square" iconSize="60" styleClass="git-icon"/>
+        <FontIcon iconLiteral="fas-code-branch" iconSize="60" styleClass="git-icon"/>
         <Text text="Git PPM" styleClass="app-title"/>
         <Text text="Professional Git Project Manager" styleClass="app-subtitle"/>
         <Text text="Made by Dharaneesh R S" styleClass="author-text"/>
@@ -65,18 +65,18 @@
         <Label fx:id="githubStatusLabel" text="" styleClass="status-label"/>
     </VBox>
 
-    <!-- Action Buttons -->
+    <!--Action Buttons -->
     <HBox spacing="15" alignment="CENTER" styleClass="button-container">
         <Button fx:id="openRepoButton" text="Open Repository" onAction="#onOpenRepository" 
                 prefWidth="165" styleClass="primary-button">
             <graphic>
-                <FontIcon iconLiteral="fa-folder-open" iconSize="16"/>
+                <FontIcon iconLiteral="fas-folder-open" iconSize="16"/>
             </graphic>
         </Button>
         <Button fx:id="cloneRepoButton" text="Clone Repository" onAction="#onCloneRepository" 
                 prefWidth="165" styleClass="primary-button">
             <graphic>
-                <FontIcon iconLiteral="fa-download" iconSize="16"/>
+                <FontIcon iconLiteral="fas-download" iconSize="16"/>
             </graphic>
         </Button>
     </HBox>
