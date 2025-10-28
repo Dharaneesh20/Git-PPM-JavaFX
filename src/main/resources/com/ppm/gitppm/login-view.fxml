@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.ppm.gitppm.controller.LoginController"
+      alignment="CENTER" spacing="20" styleClass="login-container">
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <!-- Header -->
+    <VBox alignment="CENTER" spacing="10">
+        <FontIcon iconLiteral="fa-git-square" iconSize="60" styleClass="git-icon"/>
+        <Text text="Git PPM" styleClass="app-title"/>
+        <Text text="Professional Git Project Manager" styleClass="app-subtitle"/>
+        <Text text="Made by Dharaneesh R S" styleClass="author-text"/>
+    </VBox>
+
+    <!-- Auth Type Selection -->
+    <VBox spacing="10" styleClass="auth-section">
+        <Label text="Authentication Method:" styleClass="section-label"/>
+        <ComboBox fx:id="authTypeComboBox" prefWidth="350" promptText="Select authentication method"/>
+    </VBox>
+
+    <!-- Repository Path Selection -->
+    <VBox spacing="10" styleClass="repo-section">
+        <Label text="Repository Path:" styleClass="section-label"/>
+        <HBox spacing="10">
+            <TextField fx:id="repoPathField" promptText="Select repository folder" prefWidth="280" HBox.hgrow="ALWAYS"/>
+            <Button fx:id="browseFolderButton" text="Browse" onAction="#onBrowseFolder" styleClass="secondary-button"/>
+        </HBox>
+    </VBox>
+
+    <!-- Username/Password Section -->
+    <VBox fx:id="usernamePasswordSection" spacing="10" styleClass="credentials-section" managed="false" visible="false">
+        <Label text="Git Credentials:" styleClass="section-label"/>
+        <TextField fx:id="usernameField" promptText="Username" prefWidth="350"/>
+        <PasswordField fx:id="passwordField" promptText="Password" prefWidth="350"/>
+    </VBox>
+
+    <!-- Personal Access Token Section -->
+    <VBox fx:id="patSection" spacing="10" styleClass="credentials-section" managed="false" visible="false">
+        <Label text="Personal Access Token:" styleClass="section-label"/>
+        <TextField fx:id="usernameFieldPAT" promptText="Username" prefWidth="350"/>
+        <PasswordField fx:id="patField" promptText="Personal Access Token" prefWidth="350"/>
+        <Hyperlink text="How to generate a Personal Access Token?" onAction="#onHelpPAT" styleClass="help-link"/>
+    </VBox>
+
+    <!-- GitHub OAuth Section -->
+    <VBox fx:id="githubOAuthSection" spacing="10" styleClass="credentials-section" managed="false" visible="false">
+        <Label text="Sign in with GitHub:" styleClass="section-label"/>
+        <Button fx:id="githubSignInButton" text="Sign in with GitHub" onAction="#onGitHubSignIn" 
+                prefWidth="350" styleClass="github-button">
+            <graphic>
+                <FontIcon iconLiteral="fab-github" iconSize="20"/>
+            </graphic>
+        </Button>
+        <Label fx:id="githubStatusLabel" text="" styleClass="status-label"/>
+    </VBox>
+
+    <!-- Action Buttons -->
+    <HBox spacing="15" alignment="CENTER" styleClass="button-container">
+        <Button fx:id="openRepoButton" text="Open Repository" onAction="#onOpenRepository" 
+                prefWidth="165" styleClass="primary-button">
+            <graphic>
+                <FontIcon iconLiteral="fa-folder-open" iconSize="16"/>
+            </graphic>
+        </Button>
+        <Button fx:id="cloneRepoButton" text="Clone Repository" onAction="#onCloneRepository" 
+                prefWidth="165" styleClass="primary-button">
+            <graphic>
+                <FontIcon iconLiteral="fa-download" iconSize="16"/>
+            </graphic>
+        </Button>
+    </HBox>
+
+    <!-- Status Message -->
+    <Label fx:id="statusLabel" text="" wrapText="true" prefWidth="350" styleClass="status-message"/>
+
+</VBox>
