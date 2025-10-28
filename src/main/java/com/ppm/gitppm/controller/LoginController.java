@@ -251,7 +251,7 @@ public class LoginController {
             scene.getStylesheets().add(getClass().getResource("/com/ppm/gitppm/styles.css").toExternalForm());
             
             MainController controller = loader.getController();
-            controller.initializeWithGitService(gitService, credentials);
+            controller.initializeData(gitService, credentials);
             
             Stage stage = new Stage();
             stage.setTitle("Git PPM - " + credentials.getRepositoryPath());
