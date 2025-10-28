@@ -52,13 +52,17 @@ public class MainController {
     private ObservableList<FileChange> fileChanges;
     private ObservableList<CommitInfo> commits;
 
-    public void initialize(GitService gitService, GitCredentials credentials) {
-        this.gitService = gitService;
-        this.credentials = credentials;
+    @FXML
+    public void initialize() {
         this.fileChanges = FXCollections.observableArrayList();
         this.commits = FXCollections.observableArrayList();
-        
         setupUI();
+    }
+
+    public void initializeData(GitService gitService, GitCredentials credentials) {
+        this.gitService = gitService;
+        this.credentials = credentials;
+        
         loadRepositoryData();
         startFileWatcher();
     }
