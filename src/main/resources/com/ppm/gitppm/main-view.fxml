@@ -16,28 +16,28 @@
             <!-- Main Toolbar -->
             <ToolBar styleClass="main-toolbar">
                 <HBox spacing="10" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
-                    <FontIcon iconLiteral="fa-git-square" iconSize="30" styleClass="toolbar-icon"/>
+                    <FontIcon iconLiteral="fas-git-square" iconSize="30" styleClass="toolbar-icon"/>
                     <Label fx:id="repoNameLabel" text="Repository Name" styleClass="repo-name"/>
                     <Separator orientation="VERTICAL"/>
                     <Label text="Branch:" styleClass="toolbar-label"/>
                     <ComboBox fx:id="branchComboBox" prefWidth="150" onAction="#onBranchChanged"/>
                     <Button text="New Branch" onAction="#onNewBranch" styleClass="toolbar-button">
-                        <graphic><FontIcon iconLiteral="fa-code-branch" iconSize="14"/></graphic>
+                        <graphic><FontIcon iconLiteral="fas-code-branch" iconSize="14"/></graphic>
                     </Button>
                     
                     <Region HBox.hgrow="ALWAYS"/>
                     
                     <Button text="Refresh" onAction="#onRefresh" styleClass="toolbar-button">
-                        <graphic><FontIcon iconLiteral="fa-sync" iconSize="14"/></graphic>
+                        <graphic><FontIcon iconLiteral="fas-sync" iconSize="14"/></graphic>
                     </Button>
                     <Button text="Fetch" onAction="#onFetch" styleClass="toolbar-button">
-                        <graphic><FontIcon iconLiteral="fa-download" iconSize="14"/></graphic>
+                        <graphic><FontIcon iconLiteral="fas-download" iconSize="14"/></graphic>
                     </Button>
                     <Button text="Pull" onAction="#onPull" styleClass="toolbar-button-primary">
-                        <graphic><FontIcon iconLiteral="fa-arrow-down" iconSize="14"/></graphic>
+                        <graphic><FontIcon iconLiteral="fas-arrow-down" iconSize="14"/></graphic>
                     </Button>
                     <Button text="Push" onAction="#onPush" styleClass="toolbar-button-primary">
-                        <graphic><FontIcon iconLiteral="fa-arrow-up" iconSize="14"/></graphic>
+                        <graphic><FontIcon iconLiteral="fas-arrow-up" iconSize="14"/></graphic>
                     </Button>
                 </HBox>
             </ToolBar>
@@ -71,14 +71,14 @@
                 <HBox spacing="10" styleClass="changes-actions">
                     <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
                     <Button text="Stage All" onAction="#onStageAll" prefWidth="100" styleClass="action-button">
-                        <graphic><FontIcon iconLiteral="fa-plus-circle" iconSize="14"/></graphic>
+                        <graphic><FontIcon iconLiteral="fas-plus-circle" iconSize="14"/></graphic>
                     </Button>
                     <Button text="Unstage All" onAction="#onUnstageAll" prefWidth="100" styleClass="action-button">
-                        <graphic><FontIcon iconLiteral="fa-minus-circle" iconSize="14"/></graphic>
+                        <graphic><FontIcon iconLiteral="fas-minus-circle" iconSize="14"/></graphic>
                     </Button>
                     <Region HBox.hgrow="ALWAYS"/>
                     <Button text="Discard" onAction="#onDiscardChanges" styleClass="danger-button">
-                        <graphic><FontIcon iconLiteral="fa-times-circle" iconSize="14"/></graphic>
+                        <graphic><FontIcon iconLiteral="fas-times-circle" iconSize="14"/></graphic>
                     </Button>
                 </HBox>
                 
@@ -94,10 +94,10 @@
                     <HBox spacing="10" alignment="CENTER" styleClass="commit-actions">
                         <padding><Insets top="10"/></padding>
                         <Button text="Commit" onAction="#onCommit" prefWidth="150" styleClass="commit-button">
-                            <graphic><FontIcon iconLiteral="fa-check-circle" iconSize="16"/></graphic>
+                            <graphic><FontIcon iconLiteral="fas-check-circle" iconSize="16"/></graphic>
                         </Button>
                         <Button text="Commit & Push" onAction="#onCommitAndPush" prefWidth="150" styleClass="commit-push-button">
-                            <graphic><FontIcon iconLiteral="fa-arrow-circle-up" iconSize="16"/></graphic>
+                            <graphic><FontIcon iconLiteral="fas-arrow-circle-up" iconSize="16"/></graphic>
                         </Button>
                     </HBox>
                 </VBox>
@@ -109,7 +109,7 @@
                     
                     <!-- Commit History Tab -->
                     <Tab text="Commit History">
-                        <graphic><FontIcon iconLiteral="fa-history" iconSize="14"/></graphic>
+                        <graphic><FontIcon iconLiteral="fas-history" iconSize="14"/></graphic>
                         <VBox>
                             <HBox alignment="CENTER_LEFT" spacing="10" styleClass="tab-header">
                                 <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
@@ -123,7 +123,7 @@
                     
                     <!-- Repository Info Tab -->
                     <Tab text="Repository Info">
-                        <graphic><FontIcon iconLiteral="fa-info-circle" iconSize="14"/></graphic>
+                        <graphic><FontIcon iconLiteral="fas-info-circle" iconSize="14"/></graphic>
                         <ScrollPane fitToWidth="true" styleClass="info-scroll">
                             <VBox spacing="15" styleClass="info-content">
                                 <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
@@ -154,11 +154,11 @@
                                     <Label text="Quick Actions:" styleClass="info-label"/>
                                     <Button text="Open in File Explorer" onAction="#onOpenInExplorer" 
                                             styleClass="info-action-button" prefWidth="200">
-                                        <graphic><FontIcon iconLiteral="fa-folder-open" iconSize="14"/></graphic>
+                                        <graphic><FontIcon iconLiteral="fas-folder-open" iconSize="14"/></graphic>
                                     </Button>
                                     <Button text="Open in Terminal" onAction="#onOpenInTerminal" 
                                             styleClass="info-action-button" prefWidth="200">
-                                        <graphic><FontIcon iconLiteral="fa-terminal" iconSize="14"/></graphic>
+                                        <graphic><FontIcon iconLiteral="fas-terminal" iconSize="14"/></graphic>
                                     </Button>
                                 </VBox>
                             </VBox>
@@ -167,11 +167,11 @@
                     
                     <!-- Console Output Tab -->
                     <Tab text="Console">
-                        <graphic><FontIcon iconLiteral="fa-terminal" iconSize="14"/></graphic>
+                        <graphic><FontIcon iconLiteral="fas-terminal" iconSize="14"/></graphic>
                         <VBox>
                             <ToolBar styleClass="console-toolbar">
                                 <Button text="Clear" onAction="#onClearConsole" styleClass="toolbar-button-small">
-                                    <graphic><FontIcon iconLiteral="fa-trash" iconSize="12"/></graphic>
+                                    <graphic><FontIcon iconLiteral="fas-trash" iconSize="12"/></graphic>
                                 </Button>
                             </ToolBar>
                             <TextArea fx:id="consoleArea" editable="false" wrapText="true" 
