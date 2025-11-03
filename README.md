@@ -217,7 +217,7 @@ This project is open-source and available under the MIT License.
 
 - Eclipse JGit team for the excellent Git implementation
 - JavaFX community for the powerful UI framework
-
+- FontAwesome for the beautiful icons
 ---
 
 **Made with ❤️ by Dharaneesh R S**
